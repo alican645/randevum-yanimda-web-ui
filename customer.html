@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Müşteri Modülü - Randevum Yanımda</title>
+
+    <!-- Fonts: Poppins (headings) + Open Sans (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+    <!-- ── Navbar ── -->
+    <nav class="site-navbar" id="siteNavbar">
+        <div class="navbar-inner">
+            <a class="navbar-brand" href="index.html#home">
+                <span class="brand-icon">
+                    <i data-lucide="calendar-check" style="width:20px;height:20px;"></i>
+                </span>
+                Randevum Yanımda
+            </a>
+
+            <button class="navbar-toggle" id="navToggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
+                <i data-lucide="menu" style="width:24px;height:24px;"></i>
+            </button>
+
+            <div class="navbar-menu" id="navMenu">
+                <ul class="navbar-nav-links">
+                    <li>
+                        <a href="index.html#home" data-section="home">
+                            <i data-lucide="home" style="width:16px;height:16px;"></i>
+                            Ana Sayfa
+                        </a>
+                    </li>
+                    <li class="nav-dropdown open" id="mobileDropdown">
+                        <button class="nav-dropdown-trigger active" aria-expanded="true" aria-haspopup="true">
+                            <i data-lucide="smartphone" style="width:16px;height:16px;"></i>
+                            Mobil
+                            <i data-lucide="chevron-down" class="chevron-icon" style="width:14px;height:14px;"></i>
+                        </button>
+                        <div class="nav-dropdown-menu">
+                            <a href="customer.html" class="active">
+                                <i data-lucide="user" style="width:15px;height:15px;"></i>
+                                Müşteri
+                            </a>
+                            <a href="business.html">
+                                <i data-lucide="briefcase" style="width:15px;height:15px;"></i>
+                                İşletme
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+                <a href="index.html#download" class="navbar-cta">
+                    <i data-lucide="download" style="width:16px;height:16px;"></i>
+                    İndir
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ── Main Content ── -->
+    <main class="site-main">
+        <!-- ══════════ CUSTOMER MODULE HERO ══════════ -->
+        <section class="site-section" style="padding-top:40px;">
+            <div class="section-inner">
+                <div style="display:flex; align-items:center; gap:64px; flex-wrap:wrap;">
+                    <!-- Left: Phone + Tablet mockup -->
+                    <div class="mockup-container">
+                        <div class="mockup-phone">
+                            <div class="mockup-inner" style="padding:0; border-radius:28px;">
+                                <img src="assets/images/customer_home.png"
+                                    alt="Müşteri mobil görünüm"
+                                    style="width:100%; height:100%; object-fit:cover; object-position:top; display:block;" />
+                            </div>
+                        </div>
+                        <div class="mockup-tablet">
+                            <div class="mockup-inner">
+                                <div class="tablet-sidebar">
+                                    <i data-lucide="layout-dashboard" style="width:20px;height:20px;"></i>
+                                    <i data-lucide="calendar" style="width:20px;height:20px;opacity:0.5;"></i>
+                                    <i data-lucide="users" style="width:20px;height:20px;opacity:0.5;"></i>
+                                </div>
+                                <div class="tablet-content">
+                                    <i data-lucide="tablet" style="width:40px;height:40px;margin-bottom:4px;"></i>
+                                    <span>Geniş Ekran</span>
+                                    <p style="font-size:0.75rem; color:var(--color-text-muted); margin:0;">Müşteri Deneyimi</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Text + Features -->
+                    <div style="flex:1; min-width:300px;">
+                        <span class="section-badge">
+                            <i data-lucide="user" style="width:14px;height:14px;"></i>
+                            Müşteri Modülü
+                        </span>
+                        <h1 class="section-title" style="font-size:2.75rem;">
+                            Randevunuz her zaman <span style="color:var(--color-primary);">yanınızda</span>
+                        </h1>
+                        <p class="section-subtitle" style="font-size:1.1rem; line-height:1.8;">
+                            Müşteri modülü ile randevularınızı kolayca yönetin, bildirimlerle haberdar olun ve en yakın
+                            işletmeleri keşfedin.
+                        </p>
+
+                        <div style="display:flex; flex-direction:column; gap:24px;">
+                            <div style="display:flex; align-items:flex-start; gap:16px;">
+                                <div
+                                    style="width:44px; height:44px; min-width:44px; background:var(--color-primary-light); border-radius:var(--radius-sm); display:flex; align-items:center; justify-content:center;">
+                                    <i data-lucide="calendar-clock"
+                                        style="width:22px;height:22px;color:var(--color-primary);"></i>
+                                </div>
+                                <div>
+                                    <h4 style="font-size:1.05rem; margin:0 0 4px;">Yaklaşan Randevular</h4>
+                                    <p
+                                        style="color:var(--color-text-muted); font-size:0.9rem; margin:0; line-height:1.6;">
+                                        Yaklaşan randevularınızı ana ekranda anında görün. Tarih, saat ve işletme
+                                        bilgileri tek bakışta.
+                                    </p>
+                                </div>
+                            </div>
+                            <div style="display:flex; align-items:flex-start; gap:16px;">
+                                <div
+                                    style="width:44px; height:44px; min-width:44px; background:#F0FDF4; border-radius:var(--radius-sm); display:flex; align-items:center; justify-content:center;">
+                                    <i data-lucide="calendar-plus" style="width:22px;height:22px;color:#16A34A;"></i>
+                                </div>
+                                <div>
+                                    <h4 style="font-size:1.05rem; margin:0 0 4px;">Hızlı Randevu Oluşturma</h4>
+                                    <p
+                                        style="color:var(--color-text-muted); font-size:0.9rem; margin:0; line-height:1.6;">
+                                        Tek dokunuşla yeni randevu oluşturun. İşletme seçimi, tarih ve saat belirleme
+                                        birkaç saniye sürer.
+                                    </p>
+                                </div>
+                            </div>
+                            <div style="display:flex; align-items:flex-start; gap:16px;">
+                                <div
+                                    style="width:44px; height:44px; min-width:44px; background:#FFF7ED; border-radius:var(--radius-sm); display:flex; align-items:center; justify-content:center;">
+                                    <i data-lucide="bell-ring"
+                                        style="width:22px;height:22px;color:var(--color-cta);"></i>
+                                </div>
+                                <div>
+                                    <h4 style="font-size:1.05rem; margin:0 0 4px;">Kişisel Bildirimler</h4>
+                                    <p
+                                        style="color:var(--color-text-muted); font-size:0.9rem; margin:0; line-height:1.6;">
+                                        Bildirim tercihlerinizi kişiselleştirin. Randevu hatırlatmaları, onay
+                                        bildirimleri ve güncellemelerden haberdar olun.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="index.html"
+                            style="display:inline-flex; align-items:center; gap:8px; margin-top:32px; padding:12px 24px; background:var(--color-primary-light); color:var(--color-primary); border-radius:var(--radius-md); text-decoration:none; font-family:var(--font-heading); font-weight:600; font-size:0.95rem; transition:background 0.2s ease-out; cursor:pointer;"
+                            onmouseenter="this.style.background='#BFDBFE';"
+                            onmouseleave="this.style.background='var(--color-primary-light)';">
+                            <i data-lucide="arrow-left" style="width:18px;height:18px;"></i>
+                            Ana Sayfaya Dön
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 1. customer_home -->
+        <section class="site-section bg-light" id="customer_home">
+            <div class="section-inner">
+                <div class="section-row section-row-reverse">
+                    <div class="mockup-container">
+                        <div class="mockup-phone">
+                            <div class="mockup-inner">
+                                <i data-lucide="map"></i>
+                                <span>Keşfet</span>
+                            </div>
+                        </div>
+                        <div class="mockup-tablet">
+                            <div class="mockup-inner">
+                                <div class="tablet-sidebar">
+                                    <i data-lucide="map-pin"></i>
+                                    <i data-lucide="search" style="opacity:0.5;"></i>
+                                </div>
+                                <div class="tablet-content">
+                                    <i data-lucide="map" style="width:32px;height:32px;"></i>
+                                    <span>Harita Keşfi</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-container">
+                        <span class="section-badge">Keşfet</span>
+                        <h2 class="section-title">Yakınınızdaki İşletmeleri Keşfedin</h2>
+                        <div class="feature-step">
+                            <div class="icon-box"><i data-lucide="map-pin"></i></div>
+                            <p>Yakınınızdaki işletmeleri harita üzerinde tek bakışta keşfedin.</p>
+                        </div>
+                        <div class="feature-step">
+                            <div class="icon-box"><i data-lucide="search"></i></div>
+                            <p>Kategorilere ayrılmış seçeneklerle ihtiyacınıza uygun hizmete hızla ulaşın.</p>
+                        </div>
+                        <div class="feature-step">
+                            <div class="icon-box"><i data-lucide="navigation"></i></div>
+                            <p>Arama ve keşif deneyimini bir arada sunarak randevu sürecini kolayca başlatın.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. business_groups -->
+        <section class="site-section" id="business_groups">
+            <div class="section-inner">
+                <div class="section-row">
+                    <div class="mockup-container">
+                        <div class="mockup-phone">
+                            <div class="mockup-inner">
+                                <i data-lucide="layers"></i>
+                                <span>Kategoriler</span>
+                            </div>
+                        </div>
+                        <div class="mockup-tablet">
+                            <div class="mockup-inner">
+                                <div class="tablet-sidebar">
+                                    <i data-lucide="grid"></i>
+                                    <i data-lucide="list" style="opacity:0.5;"></i>
+                                </div>
+                                <div class="tablet-content">
+                                    <i data-lucide="layers" style="width:32px;height:32px;"></i>
+                                    <span>Geniş Liste</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-container">
+                        <span class="section-badge">Karşılaştır</span>
+                        <h2 class="section-title">Size En Uygun İşletmeyi Bulun</h2>
+                        <div class="feature-step">
+                            <div class="icon-box"><i data-lucide="columns"></i></div>
+                            <p>Seçtiğiniz kategoriye ait işletmeleri tek ekranda karşılaştırın.</p>
+                        </div>
+                        <div class="feature-step">
+                            <div class="icon-box"><i data-lucide="filter"></i></div>
+                            <p>Arama ve filtreleme özellikleriyle size en uygun seçenekleri hızla daraltın.</p>
+                        </div>
+                        <div class="feature-step">
+                            <div class="icon-box"><i data-lucide="star"></i></div>
+                            <p>Puan, konum ve hizmet detaylarına göre doğru işletmeyi daha kolay bulun.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. category_reviews -->
+        <section class="site-section bg-light" id="category_reviews">
+            <div class="section-inner">
+                <div class="section-row section-row-reverse">
+                    <div class="mockup-container">
+                        <div class="mockup-phone">
+                            <div class="mockup-inner">
+                                <i data-lucide="message-square-more"></i>
+                                <span>Yorumlar</span>
+                            </div>
+                        </div>
+                        <div class="mockup-tablet">
+                            <div class="mockup-inner">
+                                <div class="tablet-sidebar">
+                                    <i data-lucide="star"></i>
+                                    <i data-lucide="thumbs-up" style="opacity:0.5;"></i>
+                                </div>
+                                <div class="tablet-content">
+                                    <i data-lucide="message-circle" style="width:32px;height:32px;"></i>
+                                    <span>Tüm İncelemeler</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-container">
+                        <span class="section-badge">Geri Bildirim</span>
+                        <h2 class="section-title">Gerçek Kullanıcı Deneyimleri</h2>
+                        <div class="feature-step">
+                            <div class="icon-box"><i data-lucide="users"></i></div>
+                            <p>Belirli bir kategorideki gerçek kullanıcı yorumlarını topluca inceleyin.</p>
+                        </div>
+                        <div class="feature-step">
+                            <div class="icon-box"><i data-lucide="bar-chart-3"></i></div>
+                            <p>Puan ve filtreleme desteğiyle memnuniyet seviyesini daha net değerlendirin.</p>
+                        </div>
+                        <div class="feature-step">
+                            <div class="icon-box"><i data-lucide="shield-check"></i></div>
+                            <p>Yorumlardan güç alarak kararınızı daha güvenli ve bilinçli verin.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. business_detail -->
+        <section class="site-section" id="business_detail">
+            <div class="section-inner">
+                <div class="section-row">
+                    <div class="mockup-container">
+                        <div class="mockup-phone">
+                            <div class="mockup-inner">
+                                <i data-lucide="info"></i>
+                                <span>İşletme Bilgi</span>
+                            </div>
+                        </div>
+                        <div class="mockup-tablet">
+                            <div class="mockup-inner">
+                                <div class="tablet-sidebar">
+                                    <i data-lucide="image"></i>
+                                    <i data-lucide="clock" style="opacity:0.5;"></i>
+                                </div>
+                                <div class="tablet-content">
+                                    <i data-lucide="store" style="width:32px;height:32px;"></i>
+                                    <span>Restoran Detayı</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-container">
+                        <span class="section-badge">Detaylar</span>
+                        <h2 class="section-title">İşletmeyi Yakından Tanıyın</h2>
+                        <div class="feature-step">
+                            <div class="icon-box"><i data-lucide="image"></i></div>
+                            <p>İşletmenin fotoğraflarını, hizmetlerini ve çalışma saatlerini tek sayfada görün.</p>
+                        </div>
+                        <div class="feature-step">
+                            <div class="icon-box"><i data-lucide="phone-call"></i></div>
+                            <p>İletişim bilgileriyle hızlıca bağlantı kurup ihtiyacınız olan detaya hemen ulaşın.</p>
+                        </div>
+                        <div class="feature-step">
+                            <div class="icon-box"><i data-lucide="zap"></i></div>
+                            <p>Konum, yorum ve randevu aksiyonları sayesinde karar verip anında harekete geçin.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. book_appointment -->
+        <section class="site-section bg-light" id="book_appointment">
+            <div class="section-inner">
+                <div class="section-row section-row-reverse">
+                    <div class="mockup-container">
+                        <div class="mockup-phone">
+                            <div class="mockup-inner">
+                                <i data-lucide="calendar-plus"></i>
+                                <span>Randevu Al</span>
+                            </div>
+                        </div>
+                        <div class="mockup-tablet">
+                            <div class="mockup-inner">
+                                <div class="tablet-sidebar">
+                                    <i data-lucide="check-square"></i>
+                                    <i data-lucide="clock" style="opacity:0.5;"></i>
+                                </div>
+                                <div class="tablet-content">
+                                    <i data-lucide="calendar" style="width:32px;height:32px;"></i>
+                                    <span>Planla</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-container">
+                        <span class="section-badge">Hızlı Plan</span>
+                        <h2 class="section-title">Adım Adım Randevu Oluşturun</h2>
+                        <div class="feature-step">
+                            <div class="icon-box"><i data-lucide="list-checks"></i></div>
+                            <p>Hizmet, tarih ve saat seçimini adım adım tamamlayarak kolayca randevu oluşturun.</p>
+                        </div>
+                        <div class="feature-step">
+                            <div class="icon-box"><i data-lucide="clock"></i></div>
+                            <p>Uygun zaman aralıklarını görüntüleyip planınıza en iyi uyan saati seçin.</p>
+                        </div>
+                        <div class="feature-step">
+                            <div class="icon-box"><i data-lucide="info"></i></div>
+                            <p>Özet alanı sayesinde onay öncesinde tüm detayları son kez kontrol edin.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. my_appointments -->
+        <section class="site-section" id="my_appointments">
+            <div class="section-inner">
+                <div class="section-row">
+                    <div class="mockup-container">
+                        <div class="mockup-phone">
+                            <div class="mockup-inner">
+                                <i data-lucide="calendar-check"></i>
+                                <span>Randevularım</span>
+                            </div>
+                        </div>
+                        <div class="mockup-tablet">
+                            <div class="mockup-inner">
+                                <div class="tablet-sidebar">
+                                    <i data-lucide="list"></i>
+                                    <i data-lucide="filter" style="opacity:0.5;"></i>
+                                </div>
+                                <div class="tablet-content">
+                                    <i data-lucide="calendar-days" style="width:32px;height:32px;"></i>
+                                    <span>Programım</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-container">
+                        <span class="section-badge">Yönetim</span>
+                        <h2 class="section-title">Randevularınız Kontrol Altında</h2>
+                        <div class="feature-step">
+                            <div class="icon-box"><i data-lucide="list"></i></div>
+                            <p>Aktif ve geçmiş randevularınızı düzenli bir yapıda tek ekranda yönetin.</p>
+                        </div>
+                        <div class="feature-step">
+                            <div class="icon-box"><i data-lucide="filter"></i></div>
+                            <p>Filtreleme desteğiyle yaklaşan ya da tamamlanan randevulara anında ulaşın.</p>
+                        </div>
+                        <div class="feature-step">
+                            <div class="icon-box"><i data-lucide="refresh-ccw"></i></div>
+                            <p>Güncel durum takibiyle planınızı her zaman kontrol altında tutun.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. conversations -->
+        <section class="site-section bg-light" id="conversations">
+            <div class="section-inner">
+                <div class="section-row section-row-reverse">
+                    <div class="mockup-container">
+                        <div class="mockup-phone">
+                            <div class="mockup-inner">
+                                <i data-lucide="message-square"></i>
+                                <span>Mesajlar</span>
+                            </div>
+                        </div>
+                        <div class="mockup-tablet">
+                            <div class="mockup-inner">
+                                <div class="tablet-sidebar">
+                                    <i data-lucide="inbox"></i>
+                                    <i data-lucide="send" style="opacity:0.5;"></i>
+                                </div>
+                                <div class="tablet-content">
+                                    <i data-lucide="messages-square" style="width:32px;height:32px;"></i>
+                                    <span>Mesaj Kutusu</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-container">
+                        <span class="section-badge">İletişim</span>
+                        <h2 class="section-title">Tüm Sohbetleriniz Tek Bir Listede</h2>
+                        <div class="feature-step">
+                            <div class="icon-box"><i data-lucide="mail"></i></div>
+                            <p>Tüm mesajlaşmalarınızı sade ve anlaşılır bir sohbet listesinde görüntüleyin.</p>
+                        </div>
+                        <div class="feature-step">
+                            <div class="icon-box"><i data-lucide="history"></i></div>
+                            <p>Son mesaj ve tarih bilgileriyle önemli konuşmaları hızla fark edin.</p>
+                        </div>
+                        <div class="feature-step">
+                            <div class="icon-box"><i data-lucide="mouse-pointer-2"></i></div>
+                            <p>Tek dokunuşla ilgili sohbete geçerek iletişimi kesintisiz sürdürün.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </section>
+
+        <!-- 8. chat -->
+        <section class="site-section" id="chat">
+            <div class="section-inner">
+                <div class="section-row">
+                    <div class="mockup-container">
+                        <div class="mockup-phone">
+                            <div class="mockup-inner">
+                                <i data-lucide="message-circle"></i>
+                                <span>Sohbet</span>
+                            </div>
+                        </div>
+                        <div class="mockup-tablet">
+                            <div class="mockup-inner">
+                                <div class="tablet-sidebar">
+                                    <i data-lucide="smile"></i>
+                                    <i data-lucide="paperclip" style="opacity:0.5;"></i>
+                                </div>
+                                <div class="tablet-content">
+                                    <i data-lucide="message-square-text" style="width:32px;height:32px;"></i>
+                                    <span>Canlı Destek</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-container">
+                        <span class="section-badge">Canlı Sohbet</span>
+                        <h2 class="section-title">İşletmelerle Doğrudan İletişim</h2>
+                        <div class="feature-step">
+                            <div class="icon-box"><i data-lucide="message-square-text"></i></div>
+                            <p>İşletmelerle iletişiminizi doğrudan ve pratik bir sohbet deneyimiyle yönetin.</p>
+                        </div>
+                        <div class="feature-step">
+                            <div class="icon-box"><i data-lucide="align-left"></i></div>
+                            <p>Mesaj geçmişini düzenli konuşma akışı içinde rahatça takip edin.</p>
+                        </div>
+                        <div class="feature-step">
+                            <div class="icon-box"><i data-lucide="help-circle"></i></div>
+                            <p>Sorularınızı hızlıca iletip randevu sürecindeki belirsizlikleri kolayca giderin.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. customer_profile -->
+        <section class="site-section bg-light" id="customer_profile">
+            <div class="section-inner">
+                <div class="section-row section-row-reverse">
+                    <div class="mockup-container">
+                        <div class="mockup-phone">
+                            <div class="mockup-inner">
+                                <i data-lucide="user"></i>
+                                <span>Profil</span>
+                            </div>
+                        </div>
+                        <div class="mockup-tablet">
+                            <div class="mockup-inner">
+                                <div class="tablet-sidebar">
+                                    <i data-lucide="edit"></i>
+                                    <i data-lucide="log-out" style="opacity:0.5;"></i>
+                                </div>
+                                <div class="tablet-content">
+                                    <i data-lucide="user-circle" style="width:32px;height:32px;"></i>
+                                    <span>Hesabım</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-container">
+                        <span class="section-badge">Profil</span>
+                        <h2 class="section-title">Kişisel Bilgileriniz Tek Yerde</h2>
+                        <div class="feature-step">
+                            <div class="icon-box"><i data-lucide="layout"></i></div>
+                            <p>Profil bilgilerinizi modern ve sade bir görünümle tek yerde görüntüleyin.</p>
+                        </div>
+                        <div class="feature-step">
+                            <div class="icon-box"><i data-lucide="database"></i></div>
+                            <p>Ad, e-posta, telefon ve üyelik tarihi gibi temel bilgilere hızlıca erişin.</p>
+                        </div>
+                        <div class="feature-step">
+                            <div class="icon-box"><i data-lucide="user-check"></i></div>
+                            <p>Kişisel hesabınızı daha düzenli ve güven veren bir sunumla takip edin.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. customer_settings -->
+        <section class="site-section" id="customer_settings">
+            <div class="section-inner">
+                <div class="section-row">
+                    <div class="mockup-container">
+                        <div class="mockup-phone">
+                            <div class="mockup-inner">
+                                <i data-lucide="settings"></i>
+                                <span>Ayarlar</span>
+                            </div>
+                        </div>
+                        <div class="mockup-tablet">
+                            <div class="mockup-inner">
+                                <div class="tablet-sidebar">
+                                    <i data-lucide="bell"></i>
+                                    <i data-lucide="lock" style="opacity:0.5;"></i>
+                                </div>
+                                <div class="tablet-content">
+                                    <i data-lucide="sliders-horizontal" style="width:32px;height:32px;"></i>
+                                    <span>Tercihler</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-container">
+                        <span class="section-badge">Tercihler</span>
+                        <h2 class="section-title">Uygulamayı Kişiselleştirin</h2>
+                        <div class="feature-step">
+                            <div class="icon-box"><i data-lucide="sliders"></i></div>
+                            <p>Hesap, görünüm ve gizlilik tercihlerinizi tek merkezden yönetin.</p>
+                        </div>
+                        <div class="feature-step">
+                            <div class="icon-box"><i data-lucide="bell"></i></div>
+                            <p>Bildirim, konum ve dil ayarlarını ihtiyaçlarınıza göre kolayca güncelleyin.</p>
+                        </div>
+                        <div class="feature-step">
+                            <div class="icon-box"><i data-lucide="log-out"></i></div>
+                            <p>Premium, yardım ve çıkış işlemlerine hızlı erişimle tüm kontrol sizde olsun.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 11. customer_account_info -->
+        <section class="site-section bg-light" id="customer_account_info">
+            <div class="section-inner">
+                <div class="section-row section-row-reverse">
+                    <div class="mockup-container">
+                        <div class="mockup-phone">
+                            <div class="mockup-inner">
+                                <i data-lucide="shield-check"></i>
+                                <span>Hesap Bilgi</span>
+                            </div>
+                        </div>
+                        <div class="mockup-tablet">
+                            <div class="mockup-inner">
+                                <div class="tablet-sidebar">
+                                    <i data-lucide="key"></i>
+                                    <i data-lucide="shield" style="opacity:0.5;"></i>
+                                </div>
+                                <div class="tablet-content">
+                                    <i data-lucide="user-check" style="width:32px;height:32px;"></i>
+                                    <span>Güvenlik</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-container">
+                        <span class="section-badge">Güvenlik</span>
+                        <h2 class="section-title">Hesap Durumu ve Güvenlik</h2>
+                        <div class="feature-step">
+                            <div class="icon-box"><i data-lucide="lock"></i></div>
+                            <p>Hesap durumunuzu ve temel üyelik bilgilerinizi güvenli bir yapıda görüntüleyin.</p>
+                        </div>
+                        <div class="feature-step">
+                            <div class="icon-box"><i data-lucide="key"></i></div>
+                            <p>Şifre değiştirme gibi önemli işlemlere tek ekrandan hızlıca ulaşın.</p>
+                        </div>
+                        <div class="feature-step">
+                            <div class="icon-box"><i data-lucide="activity"></i></div>
+                            <p>Hesap yönetimini sade ama güçlü aksiyonlarla kolayca kontrol edin.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 12. customer_premium -->
+        <section class="site-section" id="customer_premium">
+            <div class="section-inner">
+                <div class="section-row">
+                    <div class="mockup-container">
+                        <div class="mockup-phone">
+                            <div class="mockup-inner" style="background: linear-gradient(135deg, #fff 0%, #fffbeb 100%);">
+                                <i data-lucide="crown" style="color: #d97706;"></i>
+                                <span style="color: #d97706;">Premium</span>
+                            </div>
+                        </div>
+                        <div class="mockup-tablet">
+                            <div class="mockup-inner" style="background: linear-gradient(135deg, #fff 0%, #fffbeb 100%);">
+                                <div class="tablet-sidebar" style="border-color: #fde68a;">
+                                    <i data-lucide="zap" style="color: #d97706;"></i>
+                                    <i data-lucide="star" style="color: #d97706; opacity:0.5;"></i>
+                                </div>
+                                <div class="tablet-content">
+                                    <i data-lucide="gem" style="color: #d97706; width:32px;height:32px;"></i>
+                                    <span style="color: #d97706;">Ayrıcalıklı Panel</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-container">
+                        <span class="section-badge" style="background: #fffbeb; color: #d97706;">Ayrıcalık</span>
+                        <h2 class="section-title">Premium ile Deneyiminizi Katlayın</h2>
+                        <div class="feature-step">
+                            <div class="icon-box" style="background: #fffbeb; color: #d97706;"><i data-lucide="sparkles"></i></div>
+                            <p>Reklamsız kullanım ve öncelikli destek gibi ayrıcalıkları tek bakışta keşfedin.</p>
+                        </div>
+                        <div class="feature-step">
+                            <div class="icon-box" style="background: #fffbeb; color: #d97706;"><i data-lucide="gem"></i></div>
+                            <p>Premium avantajlarını net biçimde görerek karar sürecinizi kolaylaştırın.</p>
+                        </div>
+                        <div class="feature-step">
+                            <div class="icon-box" style="background: #fffbeb; color: #d97706;"><i data-lucide="zap"></i></div>
+                            <p>Aboneliğinizi birkaç adımda başlatıp daha ayrıcalıklı bir deneyime geçin.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 13. customer_map_full_screen -->
+        <section class="site-section bg-light" id="customer_map_full_screen">
+            <div class="section-inner">
+                <div class="section-row section-row-reverse">
+                    <div class="mockup-container">
+                        <div class="mockup-phone">
+                            <div class="mockup-inner">
+                                <i data-lucide="maximize"></i>
+                                <span>Tam Ekran</span>
+                            </div>
+                        </div>
+                        <div class="mockup-tablet">
+                            <div class="mockup-inner">
+                                <div class="tablet-sidebar">
+                                    <i data-lucide="map-pinned"></i>
+                                    <i data-lucide="layers" style="opacity:0.5;"></i>
+                                </div>
+                                <div class="tablet-content">
+                                    <i data-lucide="map" style="width:32px;height:32px;"></i>
+                                    <span>Geniş Harita</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-container">
+                        <span class="section-badge">Geniş Bakış</span>
+                        <h2 class="section-title">Harita Üzerinden Hızlı Keşif</h2>
+                        <div class="feature-step">
+                            <div class="icon-box"><i data-lucide="map-pinned"></i></div>
+                            <p>Yakın çevrenizdeki işletmeleri tam ekran harita üzerinde rahatça keşfedin.</p>
+                        </div>
+                        <div class="feature-step">
+                            <div class="icon-box"><i data-lucide="map-pin"></i></div>
+                            <p>Harita pinleri üzerinden işletme özeti, puan ve adres bilgilerini anında görün.</p>
+                        </div>
+                        <div class="feature-step">
+                            <div class="icon-box"><i data-lucide="external-link"></i></div>
+                            <p>Beğendiğiniz işletmenin detayına doğrudan geçerek keşfi aksiyona dönüştürün.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 14. detail_map_full_screen -->
+        <section class="site-section" id="detail_map_full_screen">
+            <div class="section-inner">
+                <div class="section-row">
+                    <div class="mockup-container">
+                        <div class="mockup-phone">
+                            <div class="mockup-inner">
+                                <i data-lucide="locate"></i>
+                                <span>Detay Harita</span>
+                            </div>
+                        </div>
+                        <div class="mockup-tablet">
+                            <div class="mockup-inner">
+                                <div class="tablet-sidebar">
+                                    <i data-lucide="navigation"></i>
+                                    <i data-lucide="compass" style="opacity:0.5;"></i>
+                                </div>
+                                <div class="tablet-content">
+                                    <i data-lucide="crosshair" style="width:32px;height:32px;"></i>
+                                    <span>Navigasyon</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-container">
+                        <span class="section-badge">Navigasyon</span>
+                        <h2 class="section-title">İşletme Konumu ve Yol Tarifi</h2>
+                        <div class="feature-step">
+                            <div class="icon-box"><i data-lucide="crosshair"></i></div>
+                            <p>İşletmenin konumunu tam ekran harita üzerinde ayrıntılı biçimde inceleyin.</p>
+                        </div>
+                        <div class="feature-step">
+                            <div class="icon-box"><i data-lucide="focus"></i></div>
+                            <p>Harita kontrolleriyle konuma hızla odaklanıp yönünüzü kolayca belirleyin.</p>
+                        </div>
+                        <div class="feature-step">
+                            <div class="icon-box"><i data-lucide="navigation-2"></i></div>
+                            <p>Yol tarifi özelliği sayesinde bulunduğunuz yerden işletmeye rahatça ulaşın.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ── Footer ── -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">Randevum Yanımda</div>
+            <ul class="footer-links">
+                <li><a href="privacy.html">Gizlilik Politikası</a></li>
+                <li><a href="index.html#home">Ana Sayfa</a></li>
+                <li><a href="index.html#mobile">Mobil</a></li>
+            </ul>
+            <div class="footer-copy">
+                &copy; 2026 Randevum Yanımda. Tüm hakları saklıdır.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Dependencies -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>İşletme Modülü - Randevum Yanımda</title>
+
+    <!-- Fonts: Poppins (headings) + Open Sans (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<!-- ── Navbar ── -->
+<nav class="site-navbar" id="siteNavbar">
+    <div class="navbar-inner">
+        <a class="navbar-brand" href="index.html#home">
+            <span class="brand-icon">
+                <i data-lucide="calendar-check" style="width:20px;height:20px;"></i>
+            </span>
+            Randevum Yanımda
+        </a>
+
+        <button class="navbar-toggle" id="navToggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
+            <i data-lucide="menu" style="width:24px;height:24px;"></i>
+        </button>
+
+        <div class="navbar-menu" id="navMenu">
+            <ul class="navbar-nav-links">
+                <li>
+                    <a href="index.html#home" data-section="home">
+                        <i data-lucide="home" style="width:16px;height:16px;"></i>
+                        Ana Sayfa
+                    </a>
+                </li>
+                <li class="nav-dropdown open" id="mobileDropdown">
+                    <button class="nav-dropdown-trigger active" aria-expanded="true" aria-haspopup="true">
+                        <i data-lucide="smartphone" style="width:16px;height:16px;"></i>
+                        Mobil
+                        <i data-lucide="chevron-down" class="chevron-icon" style="width:14px;height:14px;"></i>
+                    </button>
+                    <div class="nav-dropdown-menu">
+                        <a href="customer.html">
+                            <i data-lucide="user" style="width:15px;height:15px;"></i>
+                            Müşteri
+                        </a>
+                        <a href="business.html" class="active">
+                            <i data-lucide="briefcase" style="width:15px;height:15px;"></i>
+                            İşletme
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            <a href="index.html#download" class="navbar-cta">
+                <i data-lucide="download" style="width:16px;height:16px;"></i>
+                İndir
+            </a>
+        </div>
+    </div>
+</nav>
+
+<!-- ── Main Content ── -->
+<main class="site-main">
+    <!-- ══════════ BUSINESS MODULE HERO ══════════ -->
+    <section class="site-section" style="padding-top:40px;">
+        <div class="section-inner">
+            <div style="display:flex; align-items:center; gap:64px; flex-wrap:wrap;">
+                <!-- Left: Text + Features -->
+                <div style="flex:1; min-width:300px;">
+                    <span class="section-badge" style="background:#FFF7ED; color:var(--color-cta);">
+                        <i data-lucide="briefcase" style="width:14px;height:14px;"></i>
+                        İşletme Modülü
+                    </span>
+                    <h1 class="section-title" style="font-size:2.75rem;">
+                        İşletmeniz <span style="color:var(--color-cta);">kontrolünüzde</span>
+                    </h1>
+                    <p class="section-subtitle" style="font-size:1.1rem; line-height:1.8;">
+                        İşletme modülü ile randevuları yönetin, müşterilerinizi takip edin ve performansınızı analiz edin.
+                    </p>
+
+                    <div style="display:flex; flex-direction:column; gap:24px;">
+                        <div style="display:flex; align-items:flex-start; gap:16px;">
+                            <div style="width:44px; height:44px; min-width:44px; background:#FFF7ED; border-radius:var(--radius-sm); display:flex; align-items:center; justify-content:center;">
+                                <i data-lucide="calendar-check" style="width:22px;height:22px;color:var(--color-cta);"></i>
+                            </div>
+                            <div>
+                                <h4 style="font-size:1.05rem; margin:0 0 4px;">Günlük Randevu Akışı</h4>
+                                <p style="color:var(--color-text-muted); font-size:0.9rem; margin:0; line-height:1.6;">
+                                    Günlük randevu akışınızı takip edin. Onay bekleyen, tamamlanan ve iptal edilen randevuları görün.
+                                </p>
+                            </div>
+                        </div>
+                        <div style="display:flex; align-items:flex-start; gap:16px;">
+                            <div style="width:44px; height:44px; min-width:44px; background:#FDF4FF; border-radius:var(--radius-sm); display:flex; align-items:center; justify-content:center;">
+                                <i data-lucide="users" style="width:22px;height:22px;color:#A855F7;"></i>
+                            </div>
+                            <div>
+                                <h4 style="font-size:1.05rem; margin:0 0 4px;">Müşteri Bilgileri</h4>
+                                <p style="color:var(--color-text-muted); font-size:0.9rem; margin:0; line-height:1.6;">
+                                    Müşteri bilgilerini hızlıca görüntüleyin. Geçmiş randevular, notlar ve iletişim detayları bir arada.
+                                </p>
+                            </div>
+                        </div>
+                        <div style="display:flex; align-items:flex-start; gap:16px;">
+                            <div style="width:44px; height:44px; min-width:44px; background:var(--color-primary-light); border-radius:var(--radius-sm); display:flex; align-items:center; justify-content:center;">
+                                <i data-lucide="bar-chart-3" style="width:22px;height:22px;color:var(--color-primary);"></i>
+                            </div>
+                            <div>
+                                <h4 style="font-size:1.05rem; margin:0 0 4px;">Performans Özeti</h4>
+                                <p style="color:var(--color-text-muted); font-size:0.9rem; margin:0; line-height:1.6;">
+                                    İşletme performans özetine ulaşın. Günlük, haftalık ve aylık istatistiklerle büyümenizi takip edin.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="index.html" style="display:inline-flex; align-items:center; gap:8px; margin-top:32px; padding:12px 24px; background:#FFF7ED; color:var(--color-cta); border-radius:var(--radius-md); text-decoration:none; font-family:var(--font-heading); font-weight:600; font-size:0.95rem; transition:background 0.2s ease-out; cursor:pointer;"
+                       onmouseenter="this.style.background='#FED7AA';"
+                       onmouseleave="this.style.background='#FFF7ED';">
+                        <i data-lucide="arrow-left" style="width:18px;height:18px;"></i>
+                        Ana Sayfaya Dön
+                    </a>
+                </div>
+
+                <!-- Right: Phone + Tablet mockup -->
+                <div class="mockup-container">
+                    <div class="mockup-phone" style="background:linear-gradient(145deg, var(--color-cta), #FBBF24);">
+                        <div class="mockup-inner" style="padding:0; border-radius:28px;">
+                            <img src="assets/images/business_home.png"
+                                 alt="İşletme mobil görünüm"
+                                 style="width:100%; height:100%; object-fit:cover; object-position:top; display:block;"/>
+                        </div>
+                    </div>
+                    <div class="mockup-tablet" style="background:linear-gradient(145deg, var(--color-cta), #FBBF24);">
+                        <div class="mockup-inner">
+                            <div class="tablet-sidebar" style="border-color:rgba(251, 191, 36, 0.3);">
+                                <i data-lucide="layout-dashboard" style="color:var(--color-cta); width:20px;height:20px;"></i>
+                                <i data-lucide="users" style="color:var(--color-cta); width:20px;height:20px;opacity:0.5;"></i>
+                                <i data-lucide="bar-chart-3" style="color:var(--color-cta); width:20px;height:20px;opacity:0.5;"></i>
+                            </div>
+                            <div class="tablet-content">
+                                <i data-lucide="briefcase" style="color:var(--color-cta); width:40px;height:40px;margin-bottom:4px;"></i>
+                                <span style="color:var(--color-cta);">İşletme Paneli</span>
+                                <p style="font-size:0.75rem; color:var(--color-text-muted); margin:0;">Geniş Ekran Yönetimi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 1. business_home -->
+    <section class="site-section bg-light" id="business_home">
+        <div class="section-inner">
+            <div class="section-row section-row-reverse">
+                <div class="mockup-container">
+                    <div class="mockup-phone" style="background: linear-gradient(145deg, var(--color-cta), #FBBF24);">
+                        <div class="mockup-inner">
+                            <i data-lucide="layout-dashboard" style="color: var(--color-cta);"></i>
+                            <span style="color: var(--color-cta);">İşletme</span>
+                        </div>
+                    </div>
+                    <div class="mockup-tablet" style="background: linear-gradient(145deg, var(--color-cta), #FBBF24);">
+                        <div class="mockup-inner">
+                            <div class="tablet-sidebar" style="border-color:rgba(251, 191, 36, 0.3);">
+                                <i data-lucide="home" style="color: var(--color-cta);"></i>
+                                <i data-lucide="search" style="color: var(--color-cta); opacity:0.5;"></i>
+                            </div>
+                            <div class="tablet-content">
+                                <i data-lucide="layout-dashboard" style="color: var(--color-cta); width:32px;height:32px;"></i>
+                                <span style="color: var(--color-cta);">Panel Özeti</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-container">
+                    <span class="section-badge" style="background:#FFF7ED; color:var(--color-cta);">Özet Performans</span>
+                    <h2 class="section-title">İşletmenizi Tek Bakışta Yönetin</h2>
+                    <div class="feature-step">
+                        <div class="icon-box" style="background: #FFF7ED; color: var(--color-cta);"><i data-lucide="trending-up"></i></div>
+                        <p>İşletmenizin özet performansını ana ekranda tek bakışta takip edin.</p>
+                    </div>
+                    <div class="feature-step">
+                        <div class="icon-box" style="background: #FFF7ED; color: var(--color-cta);"><i data-lucide="search-check"></i></div>
+                        <p>Arama ve kategori akışıyla farklı işletmeleri inceleyerek sektörü daha yakından görün.</p>
+                    </div>
+                    <div class="feature-step">
+                        <div class="icon-box" style="background: #FFF7ED; color: var(--color-cta);"><i data-lucide="user-cog"></i></div>
+                        <p>Profil ve işletme düzenleme aksiyonlarına hızlı erişimle yönetimi merkezileştirin.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. my_businesses -->
+    <section class="site-section" id="my_businesses">
+        <div class="section-inner">
+            <div class="section-row">
+                <div class="mockup-container">
+                    <div class="mockup-phone" style="background: linear-gradient(145deg, var(--color-cta), #FBBF24);">
+                        <div class="mockup-inner">
+                            <i data-lucide="briefcase" style="color: var(--color-cta);"></i>
+                            <span style="color: var(--color-cta);">Şubeler</span>
+                        </div>
+                    </div>
+                    <div class="mockup-tablet" style="background: linear-gradient(145deg, var(--color-cta), #FBBF24);">
+                        <div class="mockup-inner">
+                            <div class="tablet-sidebar" style="border-color:rgba(251, 191, 36, 0.3);">
+                                <i data-lucide="grid" style="color: var(--color-cta);"></i>
+                                <i data-lucide="plus" style="color: var(--color-cta); opacity:0.5;"></i>
+                            </div>
+                            <div class="tablet-content">
+                                <i data-lucide="briefcase" style="color: var(--color-cta); width:32px;height:32px;"></i>
+                                <span style="color: var(--color-cta);">Tüm İşletmeler</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-container">
+                    <span class="section-badge" style="background:#FFF7ED; color:var(--color-cta);">Çoklu Yönetim</span>
+                    <h2 class="section-title">Tüm İşletmeleriniz Bir Arada</h2>
+                    <div class="feature-step">
+                        <div class="icon-box" style="background: #FFF7ED; color: var(--color-cta);"><i data-lucide="id-card"></i></div>
+                        <p>Sahip olduğunuz tüm işletmeleri düzenli kart yapısıyla tek ekranda görüntüleyin.</p>
+                    </div>
+                    <div class="feature-step">
+                        <div class="icon-box" style="background: #FFF7ED; color: var(--color-cta);"><i data-lucide="list-tree"></i></div>
+                        <p>Her işletmeye ayrı ayrı ulaşarak ilgili randevu akışını hızlıca yönetin.</p>
+                    </div>
+                    <div class="feature-step">
+                        <div class="icon-box" style="background: #FFF7ED; color: var(--color-cta);"><i data-lucide="sliders-horizontal"></i></div>
+                        <p>Çoklu işletme yönetimini sadeleştirip operasyon takibini kolaylaştırın.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. business_appoinments -->
+    <section class="site-section bg-light" id="business_appoinments">
+        <div class="section-inner">
+            <div class="section-row section-row-reverse">
+                <div class="mockup-container">
+                    <div class="mockup-phone" style="background: linear-gradient(145deg, var(--color-cta), #FBBF24);">
+                        <div class="mockup-inner">
+                            <i data-lucide="clock" style="color: var(--color-cta);"></i>
+                            <span style="color: var(--color-cta);">Talepler</span>
+                        </div>
+                    </div>
+                    <div class="mockup-tablet" style="background: linear-gradient(145deg, var(--color-cta), #FBBF24);">
+                        <div class="mockup-inner">
+                            <div class="tablet-sidebar" style="border-color:rgba(251, 191, 36, 0.3);">
+                                <i data-lucide="check" style="color: var(--color-cta);"></i>
+                                <i data-lucide="x" style="color: var(--color-cta); opacity:0.5;"></i>
+                            </div>
+                            <div class="tablet-content">
+                                <i data-lucide="clock" style="color: var(--color-cta); width:32px;height:32px;"></i>
+                                <span style="color: var(--color-cta);">Bekleyenler</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-container">
+                    <span class="section-badge" style="background:#FFF7ED; color:var(--color-cta);">Talepler</span>
+                    <h2 class="section-title">Hızlı ve Net Randevu Yönetimi</h2>
+                    <div class="feature-step">
+                        <div class="icon-box" style="background: #FFF7ED; color: var(--color-cta);"><i data-lucide="list-todo"></i></div>
+                        <p>Bekleyen randevu taleplerini tek listede hızlı ve net biçimde yönetin.</p>
+                    </div>
+                    <div class="feature-step">
+                        <div class="icon-box" style="background: #FFF7ED; color: var(--color-cta);"><i data-lucide="check-circle-2"></i></div>
+                        <p>Onaylama, reddetme, mesaj gönderme ve yeniden planlama işlemlerini tek yerden yapın.</p>
+                    </div>
+                    <div class="feature-step">
+                        <div class="icon-box" style="background: #FFF7ED; color: var(--color-cta);"><i data-lucide="zap"></i></div>
+                        <p>Takvim ve onaylı randevulara kısa yollarla operasyonu kesintisiz sürdürün.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. business_confirmed_appointments -->
+    <section class="site-section" id="business_confirmed_appointments">
+        <div class="section-inner">
+            <div class="section-row">
+                <div class="mockup-container">
+                    <div class="mockup-phone" style="background: linear-gradient(145deg, var(--color-cta), #FBBF24);">
+                        <div class="mockup-inner">
+                            <i data-lucide="calendar-check" style="color: var(--color-cta);"></i>
+                            <span style="color: var(--color-cta);">Onaylılar</span>
+                        </div>
+                    </div>
+                    <div class="mockup-tablet" style="background: linear-gradient(145deg, var(--color-cta), #FBBF24);">
+                        <div class="mockup-inner">
+                            <div class="tablet-sidebar" style="border-color:rgba(251, 191, 36, 0.3);">
+                                <i data-lucide="list-checks" style="color: var(--color-cta);"></i>
+                                <i data-lucide="calendar" style="color: var(--color-cta); opacity:0.5;"></i>
+                            </div>
+                            <div class="tablet-content">
+                                <i data-lucide="calendar-check" style="color: var(--color-cta); width:32px;height:32px;"></i>
+                                <span style="color: var(--color-cta);">Kayıtlı Akış</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-container">
+                    <span class="section-badge" style="background:#FFF7ED; color:var(--color-cta);">Kesinleşenler</span>
+                    <h2 class="section-title">Kesinleşen Müşteri Akışını İzleyin</h2>
+                    <div class="feature-step">
+                        <div class="icon-box" style="background: #FFF7ED; color: var(--color-cta);"><i data-lucide="list-checks"></i></div>
+                        <p>Onaylanmış randevularınızı net bir görünümle takip edin.</p>
+                    </div>
+                    <div class="feature-step">
+                        <div class="icon-box" style="background: #FFF7ED; color: var(--color-cta);"><i data-lucide="undo-2"></i></div>
+                        <p>Gerekli durumlarda randevu onayını geri çekerek planınızı yeniden şekillendirin.</p>
+                    </div>
+                    <div class="feature-step">
+                        <div class="icon-box" style="background: #FFF7ED; color: var(--color-cta);"><i data-lucide="calendar-range"></i></div>
+                        <p>Kesinleşen müşteri akışını düzenli biçimde izleyerek gününüzü daha iyi planlayın.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. business_calendar -->
+    <section class="site-section bg-light" id="business_calendar">
+        <div class="section-inner">
+            <div class="section-row section-row-reverse">
+                <div class="mockup-container">
+                    <div class="mockup-phone" style="background: linear-gradient(145deg, var(--color-cta), #FBBF24);">
+                        <div class="mockup-inner">
+                            <i data-lucide="calendar-days" style="color: var(--color-cta);"></i>
+                            <span style="color: var(--color-cta);">Takvim</span>
+                        </div>
+                    </div>
+                    <div class="mockup-tablet" style="background: linear-gradient(145deg, var(--color-cta), #FBBF24);">
+                        <div class="mockup-inner">
+                            <div class="tablet-sidebar" style="border-color:rgba(251, 191, 36, 0.3);">
+                                <i data-lucide="calendar" style="color: var(--color-cta);"></i>
+                                <i data-lucide="clock" style="color: var(--color-cta); opacity:0.5;"></i>
+                            </div>
+                            <div class="tablet-content">
+                                <i data-lucide="calendar-days" style="color: var(--color-cta); width:32px;height:32px;"></i>
+                                <span style="color: var(--color-cta);">Haftalık Görünüm</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-container">
+                    <span class="section-badge" style="background:#FFF7ED; color:var(--color-cta);">Planlama</span>
+                    <h2 class="section-title">Zaman Yönetimini Kontrol Edin</h2>
+                    <div class="feature-step">
+                        <div class="icon-box" style="background: #FFF7ED; color: var(--color-cta);"><i data-lucide="calendar"></i></div>
+                        <p>Tüm randevularınızı takvim görünümünde tarih bazlı olarak yönetin.</p>
+                    </div>
+                    <div class="feature-step">
+                        <div class="icon-box" style="background: #FFF7ED; color: var(--color-cta);"><i data-lucide="focus"></i></div>
+                        <p>Belirli bir günü seçerek o tarihe ait yoğunluğu ve planı anında görün.</p>
+                    </div>
+                    <div class="feature-step">
+                        <div class="icon-box" style="background: #FFF7ED; color: var(--color-cta);"><i data-lucide="alarm-clock"></i></div>
+                        <p>Yaklaşan randevu önizlemeleriyle zaman yönetimini daha kontrollü hale getirin.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. business_day_detail -->
+    <section class="site-section" id="business_day_detail">
+        <div class="section-inner">
+            <div class="section-row">
+                <div class="mockup-container">
+                    <div class="mockup-phone" style="background: linear-gradient(145deg, var(--color-cta), #FBBF24);">
+                        <div class="mockup-inner">
+                            <i data-lucide="timer" style="color: var(--color-cta);"></i>
+                            <span style="color: var(--color-cta);">Detay</span>
+                        </div>
+                    </div>
+                    <div class="mockup-tablet" style="background: linear-gradient(145deg, var(--color-cta), #FBBF24);">
+                        <div class="mockup-inner">
+                            <div class="tablet-sidebar" style="border-color:rgba(251, 191, 36, 0.3);">
+                                <i data-lucide="activity" style="color: var(--color-cta);"></i>
+                                <i data-lucide="bar-chart-2" style="color: var(--color-cta); opacity:0.5;"></i>
+                            </div>
+                            <div class="tablet-content">
+                                <i data-lucide="timer" style="color: var(--color-cta); width:32px;height:32px;"></i>
+                                <span style="color: var(--color-cta);">Günlük Akış</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-container">
+                    <span class="section-badge" style="background:#FFF7ED; color:var(--color-cta);">Yoğunluk Takibi</span>
+                    <h2 class="section-title">Günlük Akışı Detaylı İnceleyin</h2>
+                    <div class="feature-step">
+                        <div class="icon-box" style="background: #FFF7ED; color: var(--color-cta);"><i data-lucide="clock-3"></i></div>
+                        <p>Seçtiğiniz günün tüm randevularını saat bazlı detaylı bir akışta inceleyin.</p>
+                    </div>
+                    <div class="feature-step">
+                        <div class="icon-box" style="background: #FFF7ED; color: var(--color-cta);"><i data-lucide="pie-chart"></i></div>
+                        <p>Onaylı ve tamamlanan randevu sayılarını tek bakışta karşılaştırın.</p>
+                    </div>
+                    <div class="feature-step">
+                        <div class="icon-box" style="background: #FFF7ED; color: var(--color-cta);"><i data-lucide="calendar-heart"></i></div>
+                        <p>Çalışma saatleri ve günlük yoğunluk görünümüyle gün planlamasını güçlendirin.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. business_conversations -->
+    <section class="site-section bg-light" id="business_conversations">
+        <div class="section-inner">
+            <div class="section-row section-row-reverse">
+                <div class="mockup-container">
+                    <div class="mockup-phone" style="background: linear-gradient(145deg, var(--color-cta), #FBBF24);">
+                        <div class="mockup-inner">
+                            <i data-lucide="inbox" style="color: var(--color-cta);"></i>
+                            <span style="color: var(--color-cta);">Mesajlar</span>
+                        </div>
+                    </div>
+                    <div class="mockup-tablet" style="background: linear-gradient(145deg, var(--color-cta), #FBBF24);">
+                        <div class="mockup-inner">
+                            <div class="tablet-sidebar" style="border-color:rgba(251, 191, 36, 0.3);">
+                                <i data-lucide="mail" style="color: var(--color-cta);"></i>
+                                <i data-lucide="send" style="color: var(--color-cta); opacity:0.5;"></i>
+                            </div>
+                            <div class="tablet-content">
+                                <i data-lucide="inbox" style="color: var(--color-cta); width:32px;height:32px;"></i>
+                                <span style="color: var(--color-cta);">Konuşmalar</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-container">
+                    <span class="section-badge" style="background:#FFF7ED; color:var(--color-cta);">Müşteri İletişimi</span>
+                    <h2 class="section-title">Tüm Görüşmeler Tek Bir Listede</h2>
+                    <div class="feature-step">
+                        <div class="icon-box" style="background: #FFF7ED; color: var(--color-cta);"><i data-lucide="mail-search"></i></div>
+                        <p>Müşterilerle olan tüm konuşmalarınızı tek mesaj kutusunda düzenli biçimde görüntüleyin.</p>
+                    </div>
+                    <div class="feature-step">
+                        <div class="icon-box" style="background: #FFF7ED; color: var(--color-cta);"><i data-lucide="history"></i></div>
+                        <p>Son mesaj ve tarih bilgileriyle önemli görüşmeleri kolayca önceliklendirin.</p>
+                    </div>
+                    <div class="feature-step">
+                        <div class="icon-box" style="background: #FFF7ED; color: var(--color-cta);"><i data-lucide="mouse-pointer-2"></i></div>
+                        <p>Sohbete tek dokunuşla geçerek iletişimi hızlı ve profesyonel biçimde sürdürün.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. business_profile -->
+    <section class="site-section" id="business_profile">
+        <div class="section-inner">
+            <div class="section-row">
+                <div class="mockup-container">
+                    <div class="mockup-phone" style="background: linear-gradient(145deg, var(--color-cta), #FBBF24);">
+                        <div class="mockup-inner">
+                            <i data-lucide="user-check" style="color: var(--color-cta);"></i>
+                            <span style="color: var(--color-cta);">Profil</span>
+                        </div>
+                    </div>
+                    <div class="mockup-tablet" style="background: linear-gradient(145deg, var(--color-cta), #FBBF24);">
+                        <div class="mockup-inner">
+                            <div class="tablet-sidebar" style="border-color:rgba(251, 191, 36, 0.3);">
+                                <i data-lucide="edit-2" style="color: var(--color-cta);"></i>
+                                <i data-lucide="award" style="color: var(--color-cta); opacity:0.5;"></i>
+                            </div>
+                            <div class="tablet-content">
+                                <i data-lucide="user" style="color: var(--color-cta); width:32px;height:32px;"></i>
+                                <span style="color: var(--color-cta);">İşletme Hesabı</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-container">
+                    <span class="section-badge" style="background:#FFF7ED; color:var(--color-cta);">Profil Yönetimi</span>
+                    <h2 class="section-title">Hesap ve Performans Özeti</h2>
+                    <div class="feature-step">
+                        <div class="icon-box" style="background: #FFF7ED; color: var(--color-cta);"><i data-lucide="file-text"></i></div>
+                        <p>Hesap bilgilerinizi, istatistiklerinizi ve işletme özetlerinizi tek profilde toplayın.</p>
+                    </div>
+                    <div class="feature-step">
+                        <div class="icon-box" style="background: #FFF7ED; color: var(--color-cta);"><i data-lucide="bar-chart-big"></i></div>
+                        <p>Sahip olduğunuz işletmeleri ve genel performansınızı daha bütüncül görün.</p>
+                    </div>
+                    <div class="feature-step">
+                        <div class="icon-box" style="background: #FFF7ED; color: var(--color-cta);"><i data-lucide="award"></i></div>
+                        <p>Profil ekranı sayesinde işletme hesabınızı daha güven veren bir sunumla yönetin.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. business_settings -->
+    <section class="site-section bg-light" id="business_settings">
+        <div class="section-inner">
+            <div class="section-row section-row-reverse">
+                <div class="mockup-container">
+                    <div class="mockup-phone" style="background: linear-gradient(145deg, var(--color-cta), #FBBF24);">
+                        <div class="mockup-inner">
+                            <i data-lucide="settings" style="color: var(--color-cta);"></i>
+                            <span style="color: var(--color-cta);">Ayarlar</span>
+                        </div>
+                    </div>
+                    <div class="mockup-tablet" style="background: linear-gradient(145deg, var(--color-cta), #FBBF24);">
+                        <div class="mockup-inner">
+                            <div class="tablet-sidebar" style="border-color:rgba(251, 191, 36, 0.3);">
+                                <i data-lucide="bell" style="color: var(--color-cta);"></i>
+                                <i data-lucide="shield" style="color: var(--color-cta); opacity:0.5;"></i>
+                            </div>
+                            <div class="tablet-content">
+                                <i data-lucide="settings" style="color: var(--color-cta); width:32px;height:32px;"></i>
+                                <span style="color: var(--color-cta);">Konfigürasyon</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-container">
+                    <span class="section-badge" style="background:#FFF7ED; color:var(--color-cta);">Tercihler</span>
+                    <h2 class="section-title">İş Akışınızı Özelleştirin</h2>
+                    <div class="feature-step">
+                        <div class="icon-box" style="background: #FFF7ED; color: var(--color-cta);"><i data-lucide="sliders-horizontal"></i></div>
+                        <p>Hesap, görünüm, gizlilik ve destek ayarlarınızı tek merkezden yönetin.</p>
+                    </div>
+                    <div class="feature-step">
+                        <div class="icon-box" style="background: #FFF7ED; color: var(--color-cta);"><i data-lucide="bell-ring"></i></div>
+                        <p>Bildirim, konum ve tema tercihlerini iş akışınıza uygun şekilde özelleştirin.</p>
+                    </div>
+                    <div class="feature-step">
+                        <div class="icon-box" style="background: #FFF7ED; color: var(--color-cta);"><i data-lucide="shield-question"></i></div>
+                        <p>Satın alma, yardım ve hesap işlemlerine hızlı erişimle kontrolü elinizde tutun.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. business_account_info -->
+    <section class="site-section" id="business_account_info">
+        <div class="section-inner">
+            <div class="section-row">
+                <div class="mockup-container">
+                    <div class="mockup-phone" style="background: linear-gradient(145deg, var(--color-cta), #FBBF24);">
+                        <div class="mockup-inner">
+                            <i data-lucide="shield-check" style="color: var(--color-cta);"></i>
+                            <span style="color: var(--color-cta);">Güvenlik</span>
+                        </div>
+                    </div>
+                    <div class="mockup-tablet" style="background: linear-gradient(145deg, var(--color-cta), #FBBF24);">
+                        <div class="mockup-inner">
+                            <div class="tablet-sidebar" style="border-color:rgba(251, 191, 36, 0.3);">
+                                <i data-lucide="key" style="color: var(--color-cta);"></i>
+                                <i data-lucide="lock" style="color: var(--color-cta); opacity:0.5;"></i>
+                            </div>
+                            <div class="tablet-content">
+                                <i data-lucide="shield-check" style="color: var(--color-cta); width:32px;height:32px;"></i>
+                                <span style="color: var(--color-cta);">Hesap Koruması</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-container">
+                    <span class="section-badge" style="background:#FFF7ED; color:var(--color-cta);">Güvenlik</span>
+                    <h2 class="section-title">Üyelik ve Güvenlik Yönetimi</h2>
+                    <div class="feature-step">
+                        <div class="icon-box" style="background: #FFF7ED; color: var(--color-cta);"><i data-lucide="user-round"></i></div>
+                        <p>Hesap durumunuzu ve üyelik bilgilerinizi güvenli bir alanda görüntüleyin.</p>
+                    </div>
+                    <div class="feature-step">
+                        <div class="icon-box" style="background: #FFF7ED; color: var(--color-cta);"><i data-lucide="key-round"></i></div>
+                        <p>Şifre değiştirme ve hesap silme gibi kritik işlemleri tek ekrandan yönetin.</p>
+                    </div>
+                    <div class="feature-step">
+                        <div class="icon-box" style="background: #FFF7ED; color: var(--color-cta);"><i data-lucide="badge-info"></i></div>
+                        <p>İş hesabınızla ilgili temel bilgilere sade ve profesyonel bir yapıda ulaşın.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. business_view_profile -->
+    <section class="site-section bg-light" id="business_view_profile">
+        <div class="section-inner">
+            <div class="section-row section-row-reverse">
+                <div class="mockup-container">
+                    <div class="mockup-phone" style="background: linear-gradient(145deg, var(--color-cta), #FBBF24);">
+                        <div class="mockup-inner">
+                            <i data-lucide="eye" style="color: var(--color-cta);"></i>
+                            <span style="color: var(--color-cta);">Önizleme</span>
+                        </div>
+                    </div>
+                    <div class="mockup-tablet" style="background: linear-gradient(145deg, var(--color-cta), #FBBF24);">
+                        <div class="mockup-inner">
+                            <div class="tablet-sidebar" style="border-color:rgba(251, 191, 36, 0.3);">
+                                <i data-lucide="layout" style="color: var(--color-cta);"></i>
+                                <i data-lucide="smartphone" style="color: var(--color-cta); opacity:0.5;"></i>
+                            </div>
+                            <div class="tablet-content">
+                                <i data-lucide="eye" style="color: var(--color-cta); width:32px;height:32px;"></i>
+                                <span style="color: var(--color-cta);">Müşteri Gözü</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-container">
+                    <span class="section-badge" style="background:#FFF7ED; color:var(--color-cta);">Görünüm</span>
+                    <h2 class="section-title">Müşteri Gözünden İşletmeniz</h2>
+                    <div class="feature-step">
+                        <div class="icon-box" style="background: #FFF7ED; color: var(--color-cta);"><i data-lucide="layout"></i></div>
+                        <p>İşletme profilinizi müşterinin gördüğü deneyime yakın bir yapıda inceleyin.</p>
+                    </div>
+                    <div class="feature-step">
+                        <div class="icon-box" style="background: #FFF7ED; color: var(--color-cta);"><i data-lucide="map-pin"></i></div>
+                        <p>İletişim, hizmet, çalışma saati ve konum detaylarını bütünlüklü biçimde görün.</p>
+                    </div>
+                    <div class="feature-step">
+                        <div class="icon-box" style="background: #FFF7ED; color: var(--color-cta);"><i data-lucide="check-square"></i></div>
+                        <p>Profilinizin dışarıya nasıl yansıdığını kontrol ederek daha güçlü bir sunum oluşturun.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. business_edit -->
+    <section class="site-section" id="business_edit">
+        <div class="section-inner">
+            <div class="section-row">
+                <div class="mockup-container">
+                    <div class="mockup-phone" style="background: linear-gradient(145deg, var(--color-cta), #FBBF24);">
+                        <div class="mockup-inner">
+                            <i data-lucide="edit-3" style="color: var(--color-cta);"></i>
+                            <span style="color: var(--color-cta);">Düzenle</span>
+                        </div>
+                    </div>
+                    <div class="mockup-tablet" style="background: linear-gradient(145deg, var(--color-cta), #FBBF24);">
+                        <div class="mockup-inner">
+                            <div class="tablet-sidebar" style="border-color:rgba(251, 191, 36, 0.3);">
+                                <i data-lucide="save" style="color: var(--color-cta);"></i>
+                                <i data-lucide="image" style="color: var(--color-cta); opacity:0.5;"></i>
+                            </div>
+                            <div class="tablet-content">
+                                <i data-lucide="edit" style="color: var(--color-cta); width:32px;height:32px;"></i>
+                                <span style="color: var(--color-cta);">İşletme Ayarı</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-container">
+                    <span class="section-badge" style="background:#FFF7ED; color:var(--color-cta);">Güncelleme</span>
+                    <h2 class="section-title">İşletme Bilgilerini Güncel Tutun</h2>
+                    <div class="feature-step">
+                        <div class="icon-box" style="background: #FFF7ED; color: var(--color-cta);"><i data-lucide="file-edit"></i></div>
+                        <p>İşletme bilgileri, görseller, hizmetler ve çalışma saatlerini tek formda düzenleyin.</p>
+                    </div>
+                    <div class="feature-step">
+                        <div class="icon-box" style="background: #FFF7ED; color: var(--color-cta);"><i data-lucide="camera"></i></div>
+                        <p>Logo, fotoğraf ve konum seçimleriyle profilinizi daha ekseksiz hale getirin.</p>
+                    </div>
+                    <div class="feature-step">
+                        <div class="icon-box" style="background: #FFF7ED; color: var(--color-cta);"><i data-lucide="plus-circle"></i></div>
+                        <p>Yeni işletme oluşturma ve mevcut işletmeyi güncelleme sürecini tek akışta tamamlayın.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. slot_packages -->
+    <section class="site-section bg-light" id="slot_packages">
+        <div class="section-inner">
+            <div class="section-row section-row-reverse">
+                <div class="mockup-container">
+                    <div class="mockup-phone" style="background: linear-gradient(145deg, var(--color-cta), #FBBF24);">
+                        <div class="mockup-inner">
+                            <i data-lucide="package" style="color: var(--color-cta);"></i>
+                            <span style="color: var(--color-cta);">Paketler</span>
+                        </div>
+                    </div>
+                    <div class="mockup-tablet" style="background: linear-gradient(145deg, var(--color-cta), #FBBF24);">
+                        <div class="mockup-inner">
+                            <div class="tablet-sidebar" style="border-color:rgba(251, 191, 36, 0.3);">
+                                <i data-lucide="shopping-cart" style="color: var(--color-cta);"></i>
+                                <i data-lucide="box" style="color: var(--color-cta); opacity:0.5;"></i>
+                            </div>
+                            <div class="tablet-content">
+                                <i data-lucide="package" style="color: var(--color-cta); width:32px;height:32px;"></i>
+                                <span style="color: var(--color-cta);">Slot Yönetimi</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-container">
+                    <span class="section-badge" style="background:#FFF7ED; color:var(--color-cta);">Kapasite</span>
+                    <h2 class="section-title">En Doğru Slot Paketini Seçin</h2>
+                    <div class="feature-step">
+                        <div class="icon-box" style="background: #FFF7ED; color: var(--color-cta);"><i data-lucide="box"></i></div>
+                        <p>İşletmeniz için uygun slot paketlerini karşılaştırarak en doğru seçimi yapın.</p>
+                    </div>
+                    <div class="feature-step">
+                        <div class="icon-box" style="background: #FFF7ED; color: var(--color-cta);"><i data-lucide="banknote"></i></div>
+                        <p>Paket içeriklerini ve toplam maliyeti net biçimde görerek satın alma kararını kolaylaştırın.</p>
+                    </div>
+                    <div class="feature-step">
+                        <div class="icon-box" style="background: #FFF7ED; color: var(--color-cta);"><i data-lucide="puzzle"></i></div>
+                        <p>Slot yönetimini daha planlı hale getirip hizmet kapasitenizi destekleyin.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 14. business_reschedule_appointment -->
+    <section class="site-section" id="business_reschedule_appointment">
+        <div class="section-inner">
+            <div class="section-row">
+                <div class="mockup-container">
+                    <div class="mockup-phone" style="background: linear-gradient(145deg, var(--color-cta), #FBBF24);">
+                        <div class="mockup-inner">
+                            <i data-lucide="refresh-cw" style="color: var(--color-cta);"></i>
+                            <span style="color: var(--color-cta);">Planla</span>
+                        </div>
+                    </div>
+                    <div class="mockup-tablet" style="background: linear-gradient(145deg, var(--color-cta), #FBBF24);">
+                        <div class="mockup-inner">
+                            <div class="tablet-sidebar" style="border-color:rgba(251, 191, 36, 0.3);">
+                                <i data-lucide="calendar" style="color: var(--color-cta);"></i>
+                                <i data-lucide="clock" style="color: var(--color-cta); opacity:0.5;"></i>
+                            </div>
+                            <div class="tablet-content">
+                                <i data-lucide="refresh-cw" style="color: var(--color-cta); width:32px;height:32px;"></i>
+                                <span style="color: var(--color-cta);">Ertele/Geri Al</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-container">
+                    <span class="section-badge" style="background:#FFF7ED; color:var(--color-cta);">Esneklik</span>
+                    <h2 class="section-title">Randevuları Kolayca Güncelleyin</h2>
+                    <div class="feature-step">
+                        <div class="icon-box" style="background: #FFF7ED; color: var(--color-cta);"><i data-lucide="calendar-range"></i></div>
+                        <p>Mevcut bir randevuyu yeni tarih ve saat seçenekleriyle kolayca yeniden planlayın.</p>
+                    </div>
+                    <div class="feature-step">
+                        <div class="icon-box" style="background: #FFF7ED; color: var(--color-cta);"><i data-lucide="user"></i></div>
+                        <p>Müşteri ve hizmet bilgisini aynı ekranda görerek doğru karar verin.</p>
+                    </div>
+                    <div class="feature-step">
+                        <div class="icon-box" style="background: #FFF7ED; color: var(--color-cta);"><i data-lucide="clock-4"></i></div>
+                        <p>Uygun zaman aralıklarını seçip değişikliği hızlıca tamamlayarak süreci aksatmayın.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 15. map_picker_screen -->
+    <section class="site-section bg-light" id="map_picker_screen">
+        <div class="section-inner">
+            <div class="section-row section-row-reverse">
+                <div class="mockup-container">
+                    <div class="mockup-phone" style="background: linear-gradient(145deg, var(--color-cta), #FBBF24);">
+                        <div class="mockup-inner">
+                            <i data-lucide="map-pin" style="color: var(--color-cta);"></i>
+                            <span style="color: var(--color-cta);">Konum</span>
+                        </div>
+                    </div>
+                    <div class="mockup-tablet" style="background: linear-gradient(145deg, var(--color-cta), #FBBF24);">
+                        <div class="mockup-inner">
+                            <div class="tablet-sidebar" style="border-color:rgba(251, 191, 36, 0.3);">
+                                <i data-lucide="map" style="color: var(--color-cta);"></i>
+                                <i data-lucide="crosshair" style="color: var(--color-cta); opacity:0.5;"></i>
+                            </div>
+                            <div class="tablet-content">
+                                <i data-lucide="map-pin" style="color: var(--color-cta); width:32px;height:32px;"></i>
+                                <span style="color: var(--color-cta);">Harita Seçimi</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-container">
+                    <span class="section-badge" style="background:#FFF7ED; color:var(--color-cta);">GPS</span>
+                    <h2 class="section-title">Hassas Konum Belirleme</h2>
+                    <div class="feature-step">
+                        <div class="icon-box" style="background: #FFF7ED; color: var(--color-cta);"><i data-lucide="map"></i></div>
+                        <p>İşletme konumunu harita üzerinden doğrudan seçerek daha doğru yer bilgisi belirleyin.</p>
+                    </div>
+                    <div class="feature-step">
+                        <div class="icon-box" style="background: #FFF7ED; color: var(--color-cta);"><i data-lucide="locate"></i></div>
+                        <p>Mevcut konumunuza hızla gidip seçim sürecini pratik hale getirin.</p>
+                    </div>
+                    <div class="feature-step">
+                        <div class="icon-box" style="background: #FFF7ED; color: var(--color-cta);"><i data-lucide="save"></i></div>
+                        <p>Kaydetmeden önce koordinatları net biçimde görerek konum bilgisini güvenle onaylayın.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- ── Footer ── -->
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div class="footer-brand">Randevum Yanımda</div>
+        <ul class="footer-links">
+            <li><a href="privacy.html">Gizlilik Politikası</a></li>
+            <li><a href="index.html#home">Ana Sayfa</a></li>
+            <li><a href="index.html#mobile">Mobil</a></li>
+        </ul>
+        <div class="footer-copy">
+            &copy; 2026 Randevum Yanımda. Tüm hakları saklıdır.
+        </div>
+    </div>
+</footer>
+
+<!-- JS Dependencies -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>

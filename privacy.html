@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Gizlilik Politikası - Randevum Yanımda</title>
+
+    <!-- Fonts: Poppins (headings) + Open Sans (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<!-- ── Navbar ── -->
+<nav class="site-navbar" id="siteNavbar">
+    <div class="navbar-inner">
+        <a class="navbar-brand" href="index.html#home">
+            <span class="brand-icon">
+                <i data-lucide="calendar-check" style="width:20px;height:20px;"></i>
+            </span>
+            Randevum Yanımda
+        </a>
+
+        <button class="navbar-toggle" id="navToggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
+            <i data-lucide="menu" style="width:24px;height:24px;"></i>
+        </button>
+
+        <div class="navbar-menu" id="navMenu">
+            <ul class="navbar-nav-links">
+                <li>
+                    <a href="index.html#home" data-section="home">
+                        <i data-lucide="home" style="width:16px;height:16px;"></i>
+                        Ana Sayfa
+                    </a>
+                </li>
+                <li class="nav-dropdown" id="mobileDropdown">
+                    <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+                        <i data-lucide="smartphone" style="width:16px;height:16px;"></i>
+                        Mobil
+                        <i data-lucide="chevron-down" class="chevron-icon" style="width:14px;height:14px;"></i>
+                    </button>
+                    <div class="nav-dropdown-menu">
+                        <a href="customer.html">
+                            <i data-lucide="user" style="width:15px;height:15px;"></i>
+                            Müşteri
+                        </a>
+                        <a href="business.html">
+                            <i data-lucide="briefcase" style="width:15px;height:15px;"></i>
+                            İşletme
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <a href="index.html#tablet" data-section="tablet">
+                        <i data-lucide="tablet" style="width:16px;height:16px;"></i>
+                        Tablet
+                    </a>
+                </li>
+            </ul>
+            <a href="index.html#download" class="navbar-cta">
+                <i data-lucide="download" style="width:16px;height:16px;"></i>
+                İndir
+            </a>
+        </div>
+    </div>
+</nav>
+
+<!-- ── Main Content ── -->
+<main class="site-main">
+    <section class="site-section">
+        <div class="section-inner">
+            <h1 class="section-title">Gizlilik Politikası</h1>
+            <p class="section-subtitle">Randevum Yanımda olarak gizliliğinize önem veriyoruz.</p>
+            
+            <div style="background: var(--color-bg-white); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--color-border); shadow: var(--shadow-sm);">
+                <p>Bu sayfa, sitemizin gizlilik politikasıyla ilgili ayrıntıları sağlamak için kullanılmaktadır.</p>
+                <p>Verileriniz güvenli sunucularda saklanmakta ve sadece hizmet kalitemizi artırmak amacıyla işlenmektedir.</p>
+                <!-- Add more detailed privacy policy content if needed -->
+            </div>
+
+            <a href="index.html" style="display:inline-flex; align-items:center; gap:8px; margin-top:32px; padding:12px 24px; background:var(--color-primary-light); color:var(--color-primary); border-radius:var(--radius-md); text-decoration:none; font-family:var(--font-heading); font-weight:600; font-size:0.95rem; transition:background 0.2s ease-out; cursor:pointer;"
+               onmouseenter="this.style.background='#BFDBFE';"
+               onmouseleave="this.style.background='var(--color-primary-light)';">
+                <i data-lucide="arrow-left" style="width:18px;height:18px;"></i>
+                Ana Sayfaya Dön
+            </a>
+        </div>
+    </section>
+</main>
+
+<!-- ── Footer ── -->
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div class="footer-brand">Randevum Yanımda</div>
+        <ul class="footer-links">
+            <li><a href="privacy.html">Gizlilik Politikası</a></li>
+            <li><a href="index.html#home">Ana Sayfa</a></li>
+            <li><a href="index.html#mobile">Mobil</a></li>
+            <li><a href="index.html#tablet">Tablet</a></li>
+        </ul>
+        <div class="footer-copy">
+            &copy; 2026 Randevum Yanımda. Tüm hakları saklıdır.
+        </div>
+    </div>
+</footer>
+
+<!-- JS Dependencies -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
