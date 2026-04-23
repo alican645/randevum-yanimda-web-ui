@@ -670,3 +670,207 @@ h6 {
         font-size: 2rem !important;
     }
 }
+
+/* ── Policy Pages ── */
+.policy-hero-card {
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(59, 130, 246, 0.03));
+    border: 1px solid rgba(37, 99, 235, 0.12);
+    border-radius: var(--radius-xl);
+    padding: 28px;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 32px;
+}
+
+.policy-hero-card p {
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.policy-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.policy-meta-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.86);
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+    font-family: var(--font-heading);
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+.policy-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.policy-card {
+    background: var(--color-bg-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+}
+
+.policy-card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 20px 20px 16px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.policy-icon-box {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.policy-card-title {
+    margin: 0 0 4px;
+    font-size: 1.05rem;
+}
+
+.policy-card-note {
+    margin: 0;
+    color: var(--color-text-light);
+    font-size: 0.88rem;
+    line-height: 1.5;
+}
+
+.policy-card-body {
+    padding: 18px 20px 20px;
+}
+
+.policy-subheader {
+    font-family: var(--font-heading);
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--color-text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin: 4px 0 12px;
+}
+
+.policy-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.policy-item:last-child {
+    margin-bottom: 0;
+}
+
+.policy-item i {
+    color: var(--color-text-light);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.policy-item span {
+    color: var(--color-text-muted);
+    font-size: 0.94rem;
+    line-height: 1.65;
+}
+
+.policy-group-spacer {
+    height: 8px;
+}
+
+.policy-inline-callout {
+    background: var(--color-bg-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    box-shadow: var(--shadow-sm);
+    margin-top: 24px;
+}
+
+.policy-inline-callout p {
+    margin: 0 0 16px;
+    color: var(--color-text-muted);
+}
+
+.policy-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 28px;
+}
+
+.policy-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-size: 0.92rem;
+    font-weight: 600;
+    transition: transform 0.2s ease-out, background 0.2s ease-out, color 0.2s ease-out;
+}
+
+.policy-button:hover {
+    transform: translateY(-1px);
+}
+
+.policy-button-primary {
+    background: var(--color-primary);
+    color: #fff;
+}
+
+.policy-button-primary:hover {
+    background: var(--color-primary-dark);
+    color: #fff;
+}
+
+.policy-button-secondary {
+    background: var(--color-primary-light);
+    color: var(--color-primary);
+}
+
+.policy-button-secondary:hover {
+    background: #bfdbfe;
+    color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+    .policy-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .policy-hero-card,
+    .policy-inline-callout,
+    .policy-card-body,
+    .policy-card-header {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .policy-actions {
+        flex-direction: column;
+    }
+
+    .policy-button {
+        justify-content: center;
+        width: 100%;
+    }
+}

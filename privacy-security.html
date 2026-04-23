@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Gizlilik & Güvenlik - Randevum Yanımda</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<nav class="site-navbar" id="siteNavbar">
+    <div class="navbar-inner">
+        <a class="navbar-brand" href="index.html#home">
+            <span class="brand-icon">
+                <i data-lucide="calendar-check" style="width:20px;height:20px;"></i>
+            </span>
+            Randevum Yanımda
+        </a>
+
+        <button class="navbar-toggle" id="navToggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
+            <i data-lucide="menu" style="width:24px;height:24px;"></i>
+        </button>
+
+        <div class="navbar-menu" id="navMenu">
+            <ul class="navbar-nav-links">
+                <li>
+                    <a href="index.html#home" data-section="home">
+                        <i data-lucide="home" style="width:16px;height:16px;"></i>
+                        Ana Sayfa
+                    </a>
+                </li>
+                <li class="nav-dropdown" id="mobileDropdown">
+                    <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+                        <i data-lucide="smartphone" style="width:16px;height:16px;"></i>
+                        Mobil
+                        <i data-lucide="chevron-down" class="chevron-icon" style="width:14px;height:14px;"></i>
+                    </button>
+                    <div class="nav-dropdown-menu">
+                        <a href="customer.html">
+                            <i data-lucide="user" style="width:15px;height:15px;"></i>
+                            Müşteri
+                        </a>
+                        <a href="business.html">
+                            <i data-lucide="briefcase" style="width:15px;height:15px;"></i>
+                            İşletme
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            <a href="index.html#download" class="navbar-cta">
+                <i data-lucide="download" style="width:16px;height:16px;"></i>
+                İndir
+            </a>
+        </div>
+    </div>
+</nav>
+
+<main class="site-main">
+    <section class="site-section">
+        <div class="section-inner">
+            <span class="section-badge">
+                <i data-lucide="shield-check" style="width:14px;height:14px;"></i>
+                Gizlilik & Güvenlik
+            </span>
+            <h1 class="section-title">Uygulama içi gizlilik ve güvenlik bilgilendirmesi</h1>
+            <p class="section-subtitle">
+                Bu sayfa, Randevum Yanımda mobil uygulamasındaki Gizlilik & Güvenlik ekranında gösterilen
+                bilgilendirme içeriğinin statik web sürümüdür.
+            </p>
+
+            <div class="policy-hero-card">
+                <div class="policy-meta">
+                    <span class="policy-meta-chip">
+                        <i data-lucide="calendar-days" style="width:16px;height:16px;"></i>
+                        Son güncelleme: Mart 2026
+                    </span>
+                    <span class="policy-meta-chip">
+                        <i data-lucide="smartphone" style="width:16px;height:16px;"></i>
+                        Mobil uygulama ile uyumlu içerik
+                    </span>
+                </div>
+                <p>
+                    Randevum Yanımda, kullanıcı deneyimini sürdürmek için gerekli kişisel verileri işler; kimlik
+                    doğrulama, hesap güvenliği, dosya yükleme, mesajlaşma ve kullanıcı hakları gibi başlıklarda
+                    alınan temel önlemleri şeffaf biçimde paylaşır.
+                </p>
+            </div>
+
+            <div class="policy-grid">
+                <article class="policy-card">
+                    <div class="policy-card-header">
+                        <div class="policy-icon-box" style="background:rgba(37, 99, 235, 0.12); color:var(--color-primary);">
+                            <i data-lucide="database" style="width:22px;height:22px;"></i>
+                        </div>
+                        <div>
+                            <h2 class="policy-card-title">Toplanan Kişisel Veriler</h2>
+                            <p class="policy-card-note">Uygulama işlevlerinin sürdürülebilmesi için kullanılan temel veri başlıkları.</p>
+                        </div>
+                    </div>
+                    <div class="policy-card-body">
+                        <div class="policy-subheader">Kullanıcı (Müşteri) Verileri</div>
+                        <div class="policy-item">
+                            <i data-lucide="check" style="width:18px;height:18px;"></i>
+                            <span>E-posta adresi - Kimlik doğrulama, bildirimler ve iletişim amacıyla</span>
+                        </div>
+                        <div class="policy-item">
+                            <i data-lucide="check" style="width:18px;height:18px;"></i>
+                            <span>Şifre - Hesap güvenliği için (BCrypt algoritması ile hash'lenerek saklanır)</span>
+                        </div>
+                        <div class="policy-item">
+                            <i data-lucide="check" style="width:18px;height:18px;"></i>
+                            <span>Ad ve Soyad - Kullanıcı profili ve randevu tanımlaması için</span>
+                        </div>
+                        <div class="policy-item">
+                            <i data-lucide="check" style="width:18px;height:18px;"></i>
+                            <span>Telefon numarası - İletişim amacıyla</span>
+                        </div>
+
+                        <div class="policy-group-spacer"></div>
+                        <div class="policy-subheader">İşletme Sahibi Verileri</div>
+                        <div class="policy-item">
+                            <i data-lucide="check" style="width:18px;height:18px;"></i>
+                            <span>İşletme adı, adresi, şehri ve ülkesi - İşletme profili ve arama sonuçları için</span>
+                        </div>
+                        <div class="policy-item">
+                            <i data-lucide="check" style="width:18px;height:18px;"></i>
+                            <span>İşletme telefon numarası ve e-posta adresi - Müşterilerle iletişim için</span>
+                        </div>
+                        <div class="policy-item">
+                            <i data-lucide="check" style="width:18px;height:18px;"></i>
+                            <span>Konum bilgisi - Harita üzerinde gösterim ve yakınlık araması için</span>
+                        </div>
+                        <div class="policy-item">
+                            <i data-lucide="check" style="width:18px;height:18px;"></i>
+                            <span>İşletme fotoğrafları ve logosu - Görsel tanıtım için</span>
+                        </div>
+
+                        <div class="policy-group-spacer"></div>
+                        <div class="policy-subheader">Randevu ve İşlem Verileri</div>
+                        <div class="policy-item">
+                            <i data-lucide="check" style="width:18px;height:18px;"></i>
+                            <span>Randevu tarihi, saati ve durumu - Hizmet planlaması için</span>
+                        </div>
+                        <div class="policy-item">
+                            <i data-lucide="check" style="width:18px;height:18px;"></i>
+                            <span>Randevu notları - Müşteri ve işletme arasında bilgi paylaşımı için</span>
+                        </div>
+                        <div class="policy-item">
+                            <i data-lucide="check" style="width:18px;height:18px;"></i>
+                            <span>Mesajlaşma içerikleri - Müşteri-işletme iletişimi için</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="policy-card">
+                    <div class="policy-card-header">
+                        <div class="policy-icon-box" style="background:rgba(6, 182, 212, 0.12); color:#0891B2;">
+                            <i data-lucide="shield" style="width:22px;height:22px;"></i>
+                        </div>
+                        <div>
+                            <h2 class="policy-card-title">Kimlik Doğrulama ve Yetkilendirme</h2>
+                            <p class="policy-card-note">Oturum, erişim ve rol tabanlı koruma mekanizmaları.</p>
+                        </div>
+                    </div>
+                    <div class="policy-card-body">
+                        <div class="policy-item">
+                            <i data-lucide="check" style="width:18px;height:18px;"></i>
+                            <span>JWT (JSON Web Token) tabanlı kimlik doğrulama sistemi kullanılmaktadır.</span>
+                        </div>
+                        <div class="policy-item">
+                            <i data-lucide="check" style="width:18px;height:18px;"></i>
+                            <span>Access token'lar HMAC-SHA256 algoritması ile imzalanır.</span>
+                        </div>
+                        <div class="policy-item">
+                            <i data-lucide="check" style="width:18px;height:18px;"></i>
+                            <span>Refresh token mekanizması ile oturum yenileme desteklenir.</span>
+                        </div>
+                        <div class="policy-item">
+                            <i data-lucide="check" style="width:18px;height:18px;"></i>
+                            <span>Token'lar süreli olup, belirlenen süre sonunda geçerliliğini yitirir.</span>
+                        </div>
+                        <div class="policy-item">
+                            <i data-lucide="check" style="width:18px;height:18px;"></i>
+                            <span>Kullanıcı rolleri (Müşteri, İşletme Sahibi, Admin) ile yetki tabanlı erişim kontrolü uygulanır.</span>
+                        </div>
+                        <div class="policy-item">
+                            <i data-lucide="check" style="width:18px;height:18px;"></i>
+                            <span>E-posta doğrulama kodu ile kayıt işlemi güvence altına alınır (5 dakika geçerlidir).</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="policy-card">
+                    <div class="policy-card-header">
+                        <div class="policy-icon-box" style="background:rgba(239, 68, 68, 0.12); color:#DC2626;">
+                            <i data-lucide="lock" style="width:22px;height:22px;"></i>
+                        </div>
+                        <div>
+                            <h2 class="policy-card-title">Şifre Güvenliği</h2>
+                            <p class="policy-card-note">Parola saklama ve sıfırlama süreçlerinde uygulanan temel korumalar.</p>
+                        </div>
+                    </div>
+                    <div class="policy-card-body">
+                        <div class="policy-item">
+                            <i data-lucide="check" style="width:18px;height:18px;"></i>
+                            <span>Kullanıcı şifreleri BCrypt algoritması ile hash'lenerek veritabanında saklanır.</span>
+                        </div>
+                        <div class="policy-item">
+                            <i data-lucide="check" style="width:18px;height:18px;"></i>
+                            <span>Düz metin şifre hiçbir zaman veritabanında tutulmaz.</span>
+                        </div>
+                        <div class="policy-item">
+                            <i data-lucide="check" style="width:18px;height:18px;"></i>
+                            <span>Şifre sıfırlama işlemi, e-posta ile gönderilen tek kullanımlık doğrulama kodu üzerinden gerçekleştirilir (15 dakika geçerlidir).</span>
+                        </div>
+                        <div class="policy-item">
+                            <i data-lucide="check" style="width:18px;height:18px;"></i>
+                            <span>Şifre değiştirme yalnızca oturum açmış kullanıcılar tarafından erişilebilir.</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="policy-card">
+                    <div class="policy-card-header">
+                        <div class="policy-icon-box" style="background:rgba(6, 182, 212, 0.12); color:#0891B2;">
+                            <i data-lucide="upload" style="width:22px;height:22px;"></i>
+                        </div>
+                        <div>
+                            <h2 class="policy-card-title">Dosya Yükleme</h2>
+                            <p class="policy-card-note">İşletme görselleri ve logoları için depolama yaklaşımı.</p>
+                        </div>
+                    </div>
+                    <div class="policy-card-body">
+                        <div class="policy-item">
+                            <i data-lucide="check" style="width:18px;height:18px;"></i>
+                            <span>İşletme fotoğrafları ve logoları sunucuya yüklenir ve güvenli dizinde saklanır.</span>
+                        </div>
+                        <div class="policy-item">
+                            <i data-lucide="check" style="width:18px;height:18px;"></i>
+                            <span>Yüklenen dosyalar statik dosya sunucusu aracılığıyla erişime açılır.</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="policy-card">
+                    <div class="policy-card-header">
+                        <div class="policy-icon-box" style="background:rgba(245, 158, 11, 0.12); color:#D97706;">
+                            <i data-lucide="zap" style="width:22px;height:22px;"></i>
+                        </div>
+                        <div>
+                            <h2 class="policy-card-title">Gerçek Zamanlı İletişim</h2>
+                            <p class="policy-card-note">Mesajlaşma akışı ve kayıtların korunmasına dair teknik çerçeve.</p>
+                        </div>
+                    </div>
+                    <div class="policy-card-body">
+                        <div class="policy-item">
+                            <i data-lucide="check" style="width:18px;height:18px;"></i>
+                            <span>Müşteri ve işletme arasındaki mesajlaşma SignalR (WebSocket) teknolojisi ile gerçek zamanlı olarak gerçekleşir.</span>
+                        </div>
+                        <div class="policy-item">
+                            <i data-lucide="check" style="width:18px;height:18px;"></i>
+                            <span>Mesaj içerikleri veritabanında güvenli olarak saklanır.</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="policy-card">
+                    <div class="policy-card-header">
+                        <div class="policy-icon-box" style="background:rgba(37, 99, 235, 0.12); color:var(--color-primary);">
+                            <i data-lucide="shield-check" style="width:22px;height:22px;"></i>
+                        </div>
+                        <div>
+                            <h2 class="policy-card-title">Kullanıcı Hakları</h2>
+                            <p class="policy-card-note">Kullanıcının hesabı ve verileri üzerinde sahip olduğu temel işlemler.</p>
+                        </div>
+                    </div>
+                    <div class="policy-card-body">
+                        <div class="policy-item">
+                            <i data-lucide="check" style="width:18px;height:18px;"></i>
+                            <span>Erişim hakkı - Profilim sayfasından kişisel verilerine erişebilir.</span>
+                        </div>
+                        <div class="policy-item">
+                            <i data-lucide="check" style="width:18px;height:18px;"></i>
+                            <span>Düzeltme hakkı - Profil bilgilerini güncelleyebilir.</span>
+                        </div>
+                        <div class="policy-item">
+                            <i data-lucide="check" style="width:18px;height:18px;"></i>
+                            <span>Şifre değiştirme hakkı - Mevcut şifresini değiştirebilir.</span>
+                        </div>
+                        <div class="policy-item">
+                            <i data-lucide="check" style="width:18px;height:18px;"></i>
+                            <span>Silme hakkı - Hesap silme talebinde bulunabilir.</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="policy-actions">
+                <a href="privacy.html" class="policy-button policy-button-secondary">
+                    <i data-lucide="file-text" style="width:18px;height:18px;"></i>
+                    Genel Gizlilik Politikası
+                </a>
+                <a href="index.html" class="policy-button policy-button-primary">
+                    <i data-lucide="arrow-left" style="width:18px;height:18px;"></i>
+                    Ana Sayfaya Dön
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div class="footer-brand">Randevum Yanımda</div>
+        <ul class="footer-links">
+            <li><a href="privacy.html">Gizlilik Politikası</a></li>
+            <li><a href="privacy-security.html">Gizlilik & Güvenlik</a></li>
+            <li><a href="mailto:aydinalican006@gmail.com">aydinalican006@gmail.com</a></li>
+        </ul>
+        <div class="footer-copy">
+            &copy; 2026 Randevum Yanımda. Tüm hakları saklıdır.
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
